@@ -122,6 +122,8 @@ input{
     left: 74px ;
     opacity: 0.8;
     border: none;
+    width: 900px;
+    height: 90%;
 }
 .box{
     margin-left: 126px;
