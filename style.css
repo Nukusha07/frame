@@ -130,6 +130,7 @@ input{
     margin-top: 40px;
 }
 .smallbox{
+    display: flex;
     width: 392px;
     height: 460px;
     background: #FFFFFF;
@@ -139,6 +140,8 @@ input{
     margin-left: 20px;
     position: relative;
     margin-top: 70px;
+    justify-content: center;
+    
 }
 .buisnasmannphoto{
     width: 340px;
@@ -264,4 +267,22 @@ input{
     position: absolute;
     transform: translateY(-50%);
     margin-left:50px ;    
+}
+.hoverbox{
+    width: 0px;
+    height: 200px;
+    background-color: black;
+    z-index: 3;
+    position: absolute;
+    top: 90px;
+    left: 1166px;
+    opacity:0;
+    transition: all 1s linear;
+}
+a:hover + .hoverbox{
+    opacity:1;
+    width: 200px;
+}
+input:focus{
+    outline: none;
 }
