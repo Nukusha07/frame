@@ -55,27 +55,27 @@
                 </div>
                 <h4 class="price">Ratings</h4>
                 <div class="raiting_box">
-                    <div>
+                    <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
                         <img class="whitestar_icon" src="images/whitestar_icon.png" alt="white star icon">
                         <span>All</span>
                     </div> 
-                    <div>
+                    <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
                         <img class="whitestar_icon" src="images/whitestar_icon.png" alt="white star icon">
                         <span>5</span>
                     </div> 
-                    <div>
+                    <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
                         <img class="whitestar_icon" src="images/whitestar_icon.png" alt="white star icon">
                         <span>4</span>
                     </div> 
-                    <div>
+                    <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
                         <img class="whitestar_icon" src="images/whitestar_icon.png" alt="white star icon">
                         <span>3</span>
                     </div> 
-                    <div>
+                    <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
                         <img class="whitestar_icon" src="images/whitestar_icon.png" alt="white star icon">
                         <span>2</span>
@@ -83,16 +83,16 @@
                 </div>
                 <h4 class="price">Ratings</h4>
                 <div class="location_box">
-                    <div>
+                    <div class="location">
                         <span>Tbilisi</span>
                     </div>
-                    <div>
+                    <div class="location">
                         <span>Kutaisi</span>
                     </div>
-                    <div>
+                    <div class="location">
                         <span>Batumi</span>
                     </div>
-                    <div>
+                    <div class="location">
                         <span>Rustavi</span>
                     </div>
                 </div>
@@ -391,7 +391,50 @@
         validateRange(minPrice, maxPrice);
     });
     });
-
-    validateRange(inputElements[0].value, inputElements[1].value);
+    let text_box= document.querySelectorAll(".text_box");
+        text_box.forEach((text_box) => {
+        let clicked = false;
+        text_box.addEventListener("click", () => {
+            if (!clicked) {
+            text_box.style.backgroundColor = "#087DBF";
+            text_box.style.color = "white";
+            clicked = true;
+            } else {
+            text_box.style.backgroundColor = "";
+            text_box.style.color = "";
+            clicked = false;
+            }
+     });
+});
+        let rate = document.querySelectorAll(".rate");
+        rate.forEach((rate) => {
+        let clicked = false;
+        rate.addEventListener("click", () => {
+            if (!clicked) {
+            rate.style.backgroundColor = "#087DBF";
+            rate.style.color = "white";
+            clicked = true;
+            } else {
+            rate.style.backgroundColor = "";
+            rate.style.color = "";
+            clicked = false;
+            }
+        });
+});
+        let loc = document.querySelectorAll(".location");
+        loc.forEach((loc) => {
+        let clicked = false;
+        loc.addEventListener("click", () => {
+            if (!clicked) {
+            loc.style.backgroundColor = "#087DBF";
+            loc.style.color = "white";
+            clicked = true;
+            } else {
+            loc.style.backgroundColor = "";
+            loc.style.color = "";
+            clicked = false;
+            }
+        });
+});
 </script>
 </html>
