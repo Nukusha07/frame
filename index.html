@@ -9,16 +9,35 @@
 </head>
 <body>
     <header>
-        <div class="head">
-            <a href="#"><img src="images/headermainlogo.png" alt="headlogo"> </a>
-            <h1>WorkWise</h1>
+        <div class="head_container">
+            <div class="header-box">
+                <div class="left-contant">
+                    <a href="#">
+                        <img src="images/headermainlogo.png" alt="owl-icon">
+                    </a>
+                    <a href="#">
+                        <h2>WorkWise</h2>
+                    </a>
+                </div>
+                <div class="right-content">
+                    <div class="header-icons">
+                        <a href="#">
+                            <img src="images/massageicon.png" alt="envelope-icon">
+                        </a>
+                    </div>
+                    <div class="header-icons">
+                        <a href="#">
+                            <img src="images/heart icon.png" alt="heart-icon">
+                        </a>
+                    </div>
+                    <div class="header-icons">
+                        <a href="#">
+                            <img src="images/user.png" alt="user-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="head_icons">
-            <a href="#"> <img src="images/massageicon.png" alt="messageicon"> </a>
-            <a href="#">  <img src="images/heart.png" alt="hearticon"> </a>
-            <a href="#">  <img src="images/user.png" alt="usersicon"> </a>
-        </div>
-      
     </header>
     <section class="container">
         <div class="searchbox">
@@ -26,7 +45,7 @@
             <input type="text" placeholder="Search..">
             <img onclick="myFunctiontwo()" class="slider" src="images/sliders-horizontal.png" alt="sliders-horizontal"> 
             <div id="filter_box">
-                <h5> Category </h5>
+                <p> Category </p>
                 <div>
                     <div class="text_box"> <span> UI Designer </span> </div>
                     <div class="text_box"> <span> UX Researcher </span> </div>
@@ -40,7 +59,7 @@
                     <div class="text_box"> <span> Game Developer </span> </div>
                     <div class="text_box"> <span> Data Analyst </span> </div>
                 </div>
-                <h4 class="price">Price Range </h4>
+                <p class="price">Price Range </p>
                 <div class="card">
                     <div class="price-content">
                       <div>
@@ -53,7 +72,7 @@
                         <input type="range" class="max-price" value="250" min="10" max="500" step="10">
                       </div>
                 </div>
-                <h4 class="price">Ratings</h4>
+                <p class="price">Ratings</p>
                 <div class="raiting_box">
                     <div class="rate">
                         <img src="images/bluesta_ricon.png" alt="">
@@ -81,7 +100,7 @@
                         <span>2</span>
                     </div> 
                 </div>
-                <h4 class="price">Ratings</h4>
+                <p class="price">Ratings</p>
                 <div class="location_box">
                     <div class="location">
                         <span>Tbilisi</span>
@@ -365,32 +384,7 @@
         
       }
     }
-    let minValue = document.getElementById("min-value");
-    let maxValue = document.getElementById("max-value");
 
-    function validateRange(minPrice, maxPrice) {
-    if (minPrice > maxPrice) {
-
-        // Swap to Values
-        let tempValue = maxPrice;
-        maxPrice = minPrice;
-        minPrice = tempValue;
-    }
-
-    minValue.innerHTML = "$" + minPrice;
-    maxValue.innerHTML = "$" + maxPrice;
-    }
-
-    const inputElements = document.querySelectorAll("input");
-
-    inputElements.forEach((element) => {
-    element.addEventListener("change", (e) => {
-        let minPrice = parseInt(inputElements[0].value);
-        let maxPrice = parseInt(inputElements[1].value);
-
-        validateRange(minPrice, maxPrice);
-    });
-    });
     let text_box= document.querySelectorAll(".text_box");
         text_box.forEach((text_box) => {
         let clicked = false;
