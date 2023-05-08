@@ -12,16 +12,6 @@ body{
     max-width: 1628px;
     margin: 0 auto;
 }
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* header */
-
 header {
     width: 100%;
     height: 126px;
